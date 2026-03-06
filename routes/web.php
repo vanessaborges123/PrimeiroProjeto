@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/paginainicial', function () {
     return view('welcome');
@@ -17,3 +18,5 @@ Route::post('/resposta', function(Request $request) {
     $soma = $valor1 + $valor2;
     return("A soma é: $soma");
 });
+
+Route::resource('categorias', CategoriaController::class);
