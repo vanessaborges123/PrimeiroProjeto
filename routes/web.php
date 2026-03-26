@@ -20,3 +20,5 @@ Route::post('/resposta', function(Request $request) {
 });
 
 Route::resource('categorias', CategoriaController::class);
+
+Route::resource('produtos', ProdutoController::class);
